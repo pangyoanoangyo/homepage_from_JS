@@ -12,9 +12,57 @@ function layouts(name) {
     }
 
     layouts("header");
-    layouts("main");
     layouts("footer");
 
+function layout_id(name) {
+  fetch(`layout/${name}.html`)
+  .then(response => {
+  return response.text()
+  })
+  .then(data => {
+  document.getElementById(name).innerHTML = data;
+  });
+  }
+  layout_id("main");
+
+
+function creat_id(name) {  
+  mains = document.querySelector("main");
+  while (mains.firstChild) {
+    mains.removeChild(mains.firstChild);
+  }
+  contents = document.createElement("div");
+  contents.setAttribute("id", name);
+  mains.appendChild(contents);
+    
+    function layout_id(name) {
+        fetch(`layout/${name}.html`)
+        .then(response => {
+        return response.text()
+        })
+        .then(data => {
+        document.getElementById(name).innerHTML = data;
+        });
+        }
+        layout_id(name);   
+}
+
+
+
+// function change(id){    
+//     var id_names = "main";
+//     var mains = document.getElementById(id_names);
+//     mains.attributes.removeNamedItem("id");
+//     mains.setAttribute("id", id);
+    
+//     let homes = document.getElementById("home_click");
+//     homes.addEventListener("click", function(){
+//       one = document.querySelector("main")
+//       one.attributes.removeNamedItem("id");
+//       one.setAttribute("id", "main");        
+//     });
+
+// }
 
 
 function meuns(){
@@ -36,3 +84,5 @@ function meuns(){
       menu_contain.style.display = "none";
     }
   }
+
+//사진 바꾸는 함수

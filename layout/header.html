@@ -1,27 +1,25 @@
               
-    <a href="#" class="logo">
-        <img src="images/sw_logo_1.png" style="width: 60%; height:50%">
-    </a>                
-    <ul>
-        <li >
-            <a href="#">Home&nbsp;&nbsp;</a>
-        </li>
-        <li class="submenu">
-          <a>About&nbsp;&nbsp;</a>
-          <ul>                  
-            <li><a href="main.php?id=회사소개">회사소개</a></li>
-            <li><a href="main.php?id=연락처">연락처</a></li>
-          </ul>
-        </li>
-        <li class="submenu">
-            <a>사업분야</a>
-            <ul>
-                <li><a href="saup.php?id=cctv">CCTV</a></li>
-                <li><a href="saup.php?id=출입통제">출입통제</a></li>
-                <li><a href="saup.php?id=보안설계">보안설계</a></li>
-            </ul>
-        </li>
-    </ul> 
-    <a class='menu-trigger' id="menus" onclick="meuns()">
-        <span>About</span>             
-    </a>
+<a class="logo_id"><img src="images/sw_logo_1.png" class="logo"></a>
+
+<ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#" onclick="creat_id('main')">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" onclick="creat_id('about')">About</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" onclick="creat_id('tech')">Tech</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" onclick="creat_id('contact')">Contact</a>
+    </li>
+    <!-- <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul> -->
+    </li>
+</ul>
