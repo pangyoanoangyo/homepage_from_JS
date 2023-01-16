@@ -85,4 +85,22 @@ function meuns(){
     }
   }
 
-//사진 바꾸는 함수
+function meuns(){
+  var menu = document.getElementById("menus");
+  var menu_contain = document.getElementById("containers");
+  if(menu.className == "menu-trigger"){
+    menu.className = "menu-trigger active";
+    menu_contain.style.display = "flex";
+    menu_contain.innerHTML=`
+    <li ><a href="index.php?id=index">Home</a></li>                  
+    <li><a href="main.php?id=회사소개">회사소개</a></li>
+    <li><a href="main.php?id=연락처">연락처</a></li>
+    <li><a href="main.php?id=cctv">CCTV</a></li>
+    <li><a href="main.php?id=출입통제">출입통제</a></li>
+    <li><a href="main.php?id=보안설계">보안설계</a></li>
+    `
+  }else{
+    menu.className = "menu-trigger";
+    menu_contain.style.display = "none";
+  }
+}
