@@ -66,21 +66,35 @@ function creat_id(name) {
 
 
 function meuns(){
-    var menu = document.getElementById("menus");
-    var menu_contain = document.getElementById("containers");
-    if(menu.className == "menu-trigger"){
-      menu.className = "menu-trigger active";
-      menu_contain.style.display = "flex";
-      menu_contain.innerHTML=`
-      <li ><a href="index.php?id=index">Home</a></li>                  
-      <li><a href="main.php?id=회사소개">회사소개</a></li>
-      <li><a href="main.php?id=연락처">연락처</a></li>
-      <li><a href="main.php?id=cctv">CCTV</a></li>
-      <li><a href="main.php?id=출입통제">출입통제</a></li>
-      <li><a href="main.php?id=보안설계">보안설계</a></li>
-      `
+    var menu_names = document.getElementById("menus");
+    var navs = document.getElementById("uls");
+    while (navs.firstChild) {
+      navs.removeChild(navs.firstChild);
+    }
+    var menu = document.createElement("div");
+    menu.setAttribute("id", "menu");
+    menu.setAttribute("class", "accordion");
+    menu.innerHTML = `
+        <li class="nav-item">
+        <a class="nav-link active" aria-current="page" onclick="creat_id('main')">Home</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link active" aria-current="page" onclick="creat_id('about')">About</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link active" aria-current="page" onclick="creat_id('tech')">Tech</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link active" aria-current="page" onclick="creat_id('contact')">Contact</a>
+        </li>
+    `;
+    navs.appendChild(menu);
+
+    if (navs.style.display == "flex") {
+      navs.style.display = "none";
+      menu_names.style.color= "rgb(11, 162, 155)";
     }else{
-      menu.className = "menu-trigger";
-      menu_contain.style.display = "none";
+      navs.style.display = "flex";
+      menu_names.style.color = "red";
     }
   }
