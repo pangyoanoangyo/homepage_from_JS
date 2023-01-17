@@ -27,6 +27,7 @@ function layout_id(name) {
 
 
 function creat_id(name) {  
+
   mains = document.querySelector("main");
   while (mains.firstChild) {
     mains.removeChild(mains.firstChild);
@@ -34,7 +35,6 @@ function creat_id(name) {
   contents = document.createElement("div");
   contents.setAttribute("id", name);
   mains.appendChild(contents);
-    
     function layout_id(name) {
         fetch(`layout/${name}.html`)
         .then(response => {
@@ -44,7 +44,33 @@ function creat_id(name) {
         document.getElementById(name).innerHTML = data;
         });
         }
-        layout_id(name);   
+        layout_id(name);
+
+        if (name == "contact") {
+          let maps = document.getElementById("contract_map");
+          maps.innerHTML = `
+          <div class="col-lg-0">
+          <!-- 1. 지도 노드 -->
+          <div id="daumRoughmapContainer1673409224612" class="root_daum_roughmap root_daum_roughmap_landing"></div>     
+          <!--
+              2. 설치 스크립트
+              * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+          -->
+          <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+        
+          <!-- 3. 실행 스크립트 -->
+          <script charset="UTF-8">
+              new daum.roughmap.Lander({
+                  "timestamp" : "1673409224612",
+                  "key" : "2ddwv",
+                  "mapWidth" : "500",
+                  "mapHeight" : "360"
+              }).render();
+          </script>
+        </div>
+          `;
+        }
+
 }
 
 
@@ -98,3 +124,8 @@ function meuns(){
       menu_names.style.color = "red";
     }
   }
+
+
+  //맵 추가하는 함수
+
+  
