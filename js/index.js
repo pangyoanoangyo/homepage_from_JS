@@ -91,43 +91,59 @@ function creat_id(name) {
 // }
 
 
-function meuns(){
-    var menu_names = document.getElementById("menus");
-    var navs = document.getElementById("uls");
-    while (navs.firstChild) {
-      navs.removeChild(navs.firstChild);
+// function meuns(){
+//     var menu_names = document.getElementById("menus");
+//     // var navs = document.getElementById("uls");
+//     while (navs.firstChild) {
+//       navs.removeChild(navs.firstChild);
+//     }
+//     // var menu = document.createElement("div");
+//     // menu.setAttribute("id", "menu");
+//     // menu.setAttribute("class", "accordion");
+//     // menu.innerHTML = `
+//     //     <li class="nav-item">
+//     //     <a class="nav-link active" aria-current="page" onclick="creat_id('main')">Home</a>
+//     //     </li>
+//     //     <li class="nav-item">
+//     //     <a class="nav-link active" aria-current="page" onclick="creat_id('about')">About</a>
+//     //     </li>
+//     //     <li class="nav-item">
+//     //     <a class="nav-link active" aria-current="page" onclick="creat_id('tech')">Tech</a>
+//     //     </li>
+//     //     <li class="nav-item">
+//     //     <a class="nav-link active" aria-current="page" onclick="creat_id('contact')">Contact</a>
+//     //     </li>
+//     // `;
+//     navs.appendChild(menu);
+
+//     if (navs.style.display == "flex") {
+//       navs.style.display = "none";
+//       menu_names.style.color= "rgb(11, 162, 155)";
+//     }else{
+//       navs.style.display = "flex";
+//       menu_names.style.color = "red";
+//       menu_names.style.backgroundColor = "white";
+
+//     }
+//   }
+
+
+  //메뉴 버튼
+
+  function showme(){
+    var x = document.getElementById("navbarsExample08");
+    var tgo = document.getElementById('tg_on');
+    var tgf = document.getElementById('tg_off');
+
+    if (tgo.style.display == "flex") {
+        x.style.display = "flex";
+        tgo.style.display = "none";
+        tgf.style.display = "flex";
+    } else if(tgo.style.display == "none"){
+        x.style.display = "none";
+        tgo.style.display = "flex";
+        tgf.style.display = "none";
     }
-    var menu = document.createElement("div");
-    menu.setAttribute("id", "menu");
-    menu.setAttribute("class", "accordion");
-    menu.innerHTML = `
-        <li class="nav-item">
-        <a class="nav-link active" aria-current="page" onclick="creat_id('main')">Home</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link active" aria-current="page" onclick="creat_id('about')">About</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link active" aria-current="page" onclick="creat_id('tech')">Tech</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link active" aria-current="page" onclick="creat_id('contact')">Contact</a>
-        </li>
-    `;
-    navs.appendChild(menu);
-
-    if (navs.style.display == "flex") {
-      navs.style.display = "none";
-      menu_names.style.color= "rgb(11, 162, 155)";
-    }else{
-      navs.style.display = "flex";
-      menu_names.style.color = "red";
-      menu_names.style.backgroundColor = "white";
-
-    }
-  }
-
-
-  //맵 추가하는 함수
+}
 
   

@@ -1,36 +1,45 @@
-              
-<a class="logo_id" onclick="creat_id('main')"><img src="images/sw_logo_1.png" class="logo"></a>
-
-<ul class="nav" id="uls">
-    <li class="nav-item">
-      <a class="nav-link active" aria-current="page" onclick="creat_id('main')">Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link active" aria-current="page" onclick="creat_id('about')">About</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link active" aria-current="page" onclick="creat_id('tech')">Tech</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link active" aria-current="page" onclick="creat_id('contact')">Contact</a>
-    </li>
-    <!-- <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-      </ul> -->
-    </li>
-</ul>
-<a class='menu-trigger' id="menus" onclick="meuns()">Menu</a>
+<nav class="navbar navbar-expand-lg">
+  <div class="row collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" onclick="creat_id('main')">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" onclick="creat_id('about')">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" onclick="creat_id('tech')">Tech</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" onclick="creat_id('contact')">Contact</a>
+      </li>
+    </ul>
+  </div>
+<div class="container-fluid" id="name_nav">
+  <a class="logo_id" onclick="creat_id('main')"><img src="images/sw_logo_1.png" class="logo"></a>
+  <div class='menu-trigger' id="menus" onclick="meuns()">
+    <a class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation" id="tg_on" style="display: flex;" onclick="showme()">
+       <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16" >
+        <path d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/>
+      </svg>
+    </a>
+    <a  class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation" id="tg_off" style="display: none;" onclick="showme()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-toggle-off" viewBox="0 0 16 16" >
+        <path d="M11 4a4 4 0 0 1 0 8H8a4.992 4.992 0 0 0 2-4 4.992 4.992 0 0 0-2-4h3zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5z"/>
+      </svg>
+    </a>
+  </div>
+ </div>
+</nav>
+<!-- <a class='menu-trigger' id="menus" onclick="meuns()">Menu</a> -->
 
 
 <style>
-    #menus{
-        display: none;
-        flex-direction: row;
-    }
+#name_nav >div >div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
     @media (max-width: 768px) {
         img{
@@ -43,9 +52,27 @@
         color: rgb(11, 162, 155);
         text-decoration: none;
         }
-        #uls{
-          display: none;
-        }
-        
+        .menu-trigger{
+          display: flex;
+          flex-direction: column;
+          color: rgb(11, 162, 155);
+          text-decoration: none;
+        }    
       }
 </style>
+<script>
+  function showme(){
+    var x = document.getElementById("navbarsExample08");
+    var tgo = document.getElementById('tg_on');
+    var tgf = document.getElementById('tg_off');
+    if (x.style.display == "none") {
+        x.style.display = "flex";
+        tgf.style.display = "flex";
+    } else if(tgo.style.display == "none"){
+        x.style.display = "none";
+        tgo.style.display = "none";
+    }
+}
+</script>
+
+
