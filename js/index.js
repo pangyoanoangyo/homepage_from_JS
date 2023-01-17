@@ -122,6 +122,8 @@ function meuns(){
     }else{
       navs.style.display = "flex";
       menu_names.style.color = "red";
+      menu_names.style.backgroundColor = "white";
+
     }
   }
 
