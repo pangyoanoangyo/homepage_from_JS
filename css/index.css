@@ -58,13 +58,8 @@ header{
     object-fit: cover;
 }
 
-header{
-    color: rgb(11, 162, 155);
-    text-decoration: none;
-    margin:10px;
-}
 a{
-    color: rgb(11, 162, 155);
+    color:black;
     text-decoration: none;
     margin:13px;
 }
