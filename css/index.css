@@ -1,10 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200&family=Noto+Serif+KR&display=swap');
 
 header{
     color: #fff;
-
     text-align: start;
     font-size: 18px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Noto Serif KR', serif;
     font-weight: 800;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -16,6 +21,20 @@ header{
     justify-content: space-evenly;
     align-items: center;
     border-bottom:rgb(11, 162, 155) solid 1px;
+}
+
+#title_font{
+    font-family: 'Noto Serif KR', serif;
+
+}
+#normal_font{
+    font-family: 'Noto Serif KR', serif;
+}
+#table_font{
+    font-family: 'Noto Serif KR', serif;
+}
+#content_font{
+    font-family: 'Gothic A1', sans-serif;
 }
 .logo{
     width: 200px;
